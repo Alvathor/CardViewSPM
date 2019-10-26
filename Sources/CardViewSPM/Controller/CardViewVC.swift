@@ -50,12 +50,12 @@ open class CardViewVC: UIViewController {
     }
     
     public func setupHeight(for size: CGFloat) {
-        cardViewHeight = cardViewHeight * size
+        cardViewHeight = size
     }
     
     public enum CardSize: CGFloat {
         case screen80Percent = 0.8
-        case screen50Percent = 0.4
+        case loginFlow       = 300
         case screen30Percent = 0.3
     }
         
