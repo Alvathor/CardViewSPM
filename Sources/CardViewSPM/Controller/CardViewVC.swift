@@ -55,7 +55,7 @@ open class CardViewVC: UIViewController {
     
     public enum CardSize: CGFloat {
         case screen80Percent = 0.8
-        case screen50Percent = 0.5
+        case screen50Percent = 0.4
         case screen30Percent = 0.3
     }
         
