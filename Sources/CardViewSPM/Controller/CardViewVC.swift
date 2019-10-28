@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIViewExtensionsSPM
 
 open class CardViewVC: UIViewController {
     
@@ -181,22 +182,22 @@ extension CardViewVC: UIViewControllerTransitioningDelegate, UIViewControllerAni
     }
 }
 
-public class Bindable<T> {
-    
-    public init() {}
-    
-    public var value: T? {
-        didSet {
-            observer?(value)
-        }
-    }
-    
-    public var observer: ((T?) -> ())?
-    
-    public func bind(observer: @escaping (T?) -> ()) {
-        self.observer = observer
-    }
-}
+//public class Bindable<T> {
+//
+//    public init() {}
+//
+//    public var value: T? {
+//        didSet {
+//            observer?(value)
+//        }
+//    }
+//
+//    public var observer: ((T?) -> ())?
+//
+//    public func bind(observer: @escaping (T?) -> ()) {
+//        self.observer = observer
+//    }
+//}
 
 public enum CardViewActions: String{
     case toLogin = "toLogin"
