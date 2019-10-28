@@ -41,23 +41,23 @@ open class CardViewVC: UIViewController {
     
     //MARK: - Setup
     
-    public func setupCardViewStyle(closeViewColor: UIColor, headerViewColor: UIColor, backgroundColor: UIColor, isHasHeader: Bool, height: CardSize) {
+    public func setupCardViewStyle(closeViewColor: UIColor, headerViewColor: UIColor, backgroundColor: UIColor, isHasHeader: Bool, height: CGFloat) {
         cardView.closeView.backgroundColor = closeViewColor
         cardView.headerView.backgroundColor = headerViewColor
         cardView.backgroundColor = backgroundColor
         cardView.setupCardViewContainer(itHasHeader: isHasHeader)
-        setupHeight(for: height.rawValue)
+        setupHeight(for: height)
     }
     
     public func setupHeight(for size: CGFloat) {
         cardViewHeight = size
     }
     
-    public enum CardSize: CGFloat {
-        case screen80Percent = 0.8
-        case loginFlow       = 300
-        case screen30Percent = 0.3
-    }
+//    public enum CardSize: CGFloat {
+//        case screen80Percent = 0.8
+//        case loginFlow       = 300
+//        case screen30Percent = 0.3
+//    }
         
     public func setupCardView() {
         view.backgroundColor = .clear
