@@ -199,7 +199,8 @@ extension CardViewVC: UIViewControllerTransitioningDelegate, UIViewControllerAni
 //    }
 //}
 
-public enum CardViewActions: String{
+public enum CardViewActions: String {
+    
     case toLoginVC = "toLoginVC"
     case toMainVC = "toMainVC"
     case upLoad = "upLoad"
