@@ -22,8 +22,11 @@ open class CardViewVC: UIViewController {
         modalPresentationStyle = .custom
         transitioningDelegate = self
         //        forceLightMode()
+//        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(panGesture))
+//        cardView.addGestureRecognizer(gesture)
     }
     
+   
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -53,13 +56,7 @@ open class CardViewVC: UIViewController {
     public func setupHeight(for size: CGFloat) {
         cardViewHeight = size
     }
-    
-//    public enum CardSize: CGFloat {
-//        case screen80Percent = 0.8
-//        case loginFlow       = 300
-//        case screen30Percent = 0.3
-//    }
-        
+
     public func setupCardView() {
         view.backgroundColor = .clear
         view.addSubview(backdropView)
@@ -81,6 +78,13 @@ open class CardViewVC: UIViewController {
         })
         bodyTapGesture.addTarget(self, action: #selector(handleGesture(_:)))
     }
+    
+//    @objc func panGesture(recognizer: UIPanGestureRecognizer) {
+//        let translation = recognizer.translation(in: self.cardView)
+//        let y = self.cardView.frame.minY
+//        self.cardView.frame = CGRect(x: 0, y: y + translation.y, width: view.frame.width, height: cardView.frame.height)
+//        recognizer.setTranslation(.zero, in: self.cardView)
+//    }
     
     var backdropView: UIView = {
         let bdView = UIView(frame: UIScreen.main.bounds)
@@ -181,23 +185,6 @@ extension CardViewVC: UIViewControllerTransitioningDelegate, UIViewControllerAni
         }
     }
 }
-
-//public class Bindable<T> {
-//
-//    public init() {}
-//
-//    public var value: T? {
-//        didSet {
-//            observer?(value)
-//        }
-//    }
-//
-//    public var observer: ((T?) -> ())?
-//
-//    public func bind(observer: @escaping (T?) -> ()) {
-//        self.observer = observer
-//    }
-//}
 
 public enum CardViewActions: String {
     
