@@ -8,18 +8,6 @@
 import UIKit
 import UIViewExtensionsSPM
 
-open class CardController: UIActivityViewController {
-    
-    public override init(activityItems: [Any], applicationActivities: [UIActivity]?) {
-        super.init(activityItems: activityItems, applicationActivities: applicationActivities)
-    }
-    
-    public init(_ backgroundColor: UIColor?) {
-        super.init(activityItems: [], applicationActivities: nil)
-//        view.subviews.forEach({$0.removeFromSuperview()})
-    }
-}
-
 open class CardViewVC: UIViewController {
     
     public let cardView = CardView()
@@ -33,7 +21,7 @@ open class CardViewVC: UIViewController {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .custom
         transitioningDelegate = self
-        //        forceLightMode()
+//                forceLightMode()
 //        let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(panGesture))
 //        cardView.addGestureRecognizer(gesture)
     }

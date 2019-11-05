@@ -11,7 +11,7 @@ public class CardView: UIView {
     
     let closeView: UIView = {
         let c = UIView()
-        c.layer.cornerRadius = 4
+        c.layer.cornerRadius = 2
         c.clipsToBounds = true
         return c
     }()
@@ -50,7 +50,7 @@ public class CardView: UIView {
             addSubview(headerView)
             headerView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, size: .init(width: 0, height: 40))
             headerView.addSubview(closeView)
-            closeView.centerInSuperview(size: .init(width: 80, height: 8))
+            closeView.centerInSuperview(size: .init(width: 60, height: 4))
             headerView.addGestureRecognizer(tapGesture)
             headerView.addGestureRecognizer(panGesture)
             
