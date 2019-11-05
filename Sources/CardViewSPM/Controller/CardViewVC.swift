@@ -16,7 +16,7 @@ open class CardController: UIActivityViewController {
     
     public init(_ backgroundColor: UIColor?) {
         super.init(activityItems: [], applicationActivities: nil)
-        view.subviews.forEach({$0.removeFromSuperview()})
+//        view.subviews.forEach({$0.removeFromSuperview()})
     }
 }
 
