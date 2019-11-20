@@ -32,7 +32,7 @@ public class CardViewActivityVC: UIActivityViewController {
     }
 }
 
-// Wrapper is neccessarie in order to have a navigation controller inside the UIActivityViewController
+// Wrapper is neccessary in order to have a navigation controller inside the UIActivityViewController
 class WrapperController: UIViewController {
     
     var navController: UINavigationController?
