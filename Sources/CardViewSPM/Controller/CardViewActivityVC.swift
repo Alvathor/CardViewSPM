@@ -9,7 +9,7 @@ import UIKit
 
 
 // UIActivityViewController with the default behavior but with custom controller inside
-public class CardViewActivityVC: UIActivityViewController {
+public final class CardViewActivityVC: UIActivityViewController {
     
     private var wrapperController: WrapperController?
     
@@ -33,7 +33,7 @@ public class CardViewActivityVC: UIActivityViewController {
 }
 
 // Wrapper is neccessary in order to have a navigation controller inside the UIActivityViewController
-class WrapperController: UIViewController {
+private class WrapperController: UIViewController {
     
     var navController: UINavigationController?
     
