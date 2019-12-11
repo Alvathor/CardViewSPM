@@ -29,6 +29,7 @@ public final class CardViewActivityVC: UIActivityViewController {
         view.subviews.forEach({$0.removeFromSuperview()})
         guard let vc = wrapperController else { return }
         view.addSubview(vc.view)
+        vc.view.fillSuperview()
     }
 }
 
